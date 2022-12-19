@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Component\BaseGeneral\RichLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Component\Controller\AdvancePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Utility\DialogForms\SelectComboBoxItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Utility\EditDesktopElement\EditDesktopElementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Utility\EditImageCollection\EditImageCollectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Utility\PleaseWait\ShowPleaseWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Utility\SelectUIElement\SelectUIElemetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Utility\SelectUIElement\ShowDetailOfUIElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,54 @@
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.csproj.AssemblyReference.cache
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.Properties.Resources.resources
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.csproj.GenerateResource.cache
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.AssemblyInfoInputs.cache
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.AssemblyInfo.cs
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.csproj.CoreCompileInputs.cache
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.exe
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.deps.json
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.runtimeconfig.json
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.pdb
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\FlaUI.Core.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\FlaUI.UIA2.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\FlaUI.UIA3.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\Interop.UIAutomationClient.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\System.Management.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\AdvancePanelLibrary.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\bin\Debug\net6.0-windows\AdvancePanelLibrary.pdb
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.csproj.CopyComplete
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\refint\AutoAdvPanelTest.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.pdb
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.genruntimeconfig.cache
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\ref\AutoAdvPanelTest.dll
+D:\VS Projects\AutoCreateWithJson\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.AdvMainForm.resources
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\refint\AutoAdvPanelTest.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.pdb
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.exe
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.deps.json
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.runtimeconfig.json
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\AutoAdvPanelTest.pdb
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\FlaUI.Core.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\FlaUI.UIA2.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\FlaUI.UIA3.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\Interop.UIAutomationClient.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\AdvancePanelLibrary.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\bin\Debug\net6.0-windows\AdvancePanelLibrary.pdb
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.csproj.AssemblyReference.cache
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.AdvMainForm.resources
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.Properties.Resources.resources
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.csproj.GenerateResource.cache
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.AssemblyInfoInputs.cache
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.AssemblyInfo.cs
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.csproj.CoreCompileInputs.cache
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.csproj.CopyComplete
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\AutoAdvPanelTest.genruntimeconfig.cache
+C:\Users\Ali\Desktop\project\ConsoleApp1\AutoAdvPanelTest\obj\Debug\net6.0-windows\ref\AutoAdvPanelTest.dll

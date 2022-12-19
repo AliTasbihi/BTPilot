@@ -1,0 +1,42 @@
+Date >>>>> 20/07/1401 10:53:35 ق.ظ
+ConnectToAdvancePanel
+================================================
+Date >>>>> 20/07/1401 10:53:35 ق.ظ
+Player Error >>>>> هیچ نقطه شروعی پیدا نشد
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+FlowToHere: BldBlkSetUIElementValue
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+ConnectToAdvancePanel
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+Current Command: BldBlkStart
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+Current Command: BldBlkStartApplication
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+StartApplication
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+ErrorToFindTargetElement:BldBlkSetUIElementValue
+================================================
+Date >>>>> 20/07/1401 10:53:41 ق.ظ
+FinishWithError:BldBlkSetUIElementValue
+================================================

@@ -1,0 +1,363 @@
+Date >>>>> 12/4/2022 10:09:21 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 12/4/2022 10:09:21 AM
+Player Error >>>>> هیچ نقطه شروعی پیدا نشد
+================================================
+Date >>>>> 12/4/2022 10:09:29 AM
+FlowToHere: BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:09:29 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 12/4/2022 10:09:29 AM
+Current Command: BldBlkStart
+================================================
+Date >>>>> 12/4/2022 10:09:29 AM
+Current Command: BldBlkStartApplication
+================================================
+Date >>>>> 12/4/2022 10:09:29 AM
+StartApplication
+================================================
+Date >>>>> 12/4/2022 10:09:43 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:09:43 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:09:44 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:09:47 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:09:47 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:09:48 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:09:49 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:09:49 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:09:50 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:09:50 AM
+Current Command: BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:09:50 AM
+StartExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:09:52 AM
+FinishExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:09:52 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:09:52 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:09:52 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:09:54 AM
+Current Command: BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:09:54 AM
+StartExecutorBuildingBlock:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:09:57 AM
+FinishExecutorBuildingBlock:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:11:50 AM
+FlowToHere: BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:11:50 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 12/4/2022 10:11:51 AM
+Current Command: BldBlkStart
+================================================
+Date >>>>> 12/4/2022 10:11:51 AM
+Current Command: BldBlkStartApplication
+================================================
+Date >>>>> 12/4/2022 10:11:51 AM
+StartApplication
+================================================
+Date >>>>> 12/4/2022 10:11:54 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:11:54 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:11:55 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:11:55 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:11:55 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:11:56 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:12:28 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:12:28 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:12:29 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:12:29 AM
+Current Command: BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:12:29 AM
+StartExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:12:30 AM
+FinishExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:12:30 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:12:30 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:12:31 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:12:31 AM
+Current Command: BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:12:31 AM
+StartExecutorBuildingBlock:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:12:33 AM
+ErrorToFindTargetElement:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:12:33 AM
+FinishWithError:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:37:59 AM
+FlowToHere: BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:37:59 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 12/4/2022 10:37:59 AM
+Current Command: BldBlkStart
+================================================
+Date >>>>> 12/4/2022 10:37:59 AM
+Current Command: BldBlkStartApplication
+================================================
+Date >>>>> 12/4/2022 10:37:59 AM
+StartApplication
+================================================
+Date >>>>> 12/4/2022 10:37:59 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:37:59 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:38:00 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:38:00 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:38:00 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:38:00 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:38:00 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:38:00 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:38:01 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:38:01 AM
+Current Command: BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:38:01 AM
+StartExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:38:03 AM
+FinishExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:38:03 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:38:03 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:38:03 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:38:03 AM
+Current Command: BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:38:03 AM
+StartExecutorBuildingBlock:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:38:05 AM
+FinishExecutorBuildingBlock:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:39:05 AM
+FlowToHere: BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:39:05 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 12/4/2022 10:39:05 AM
+Current Command: BldBlkStart
+================================================
+Date >>>>> 12/4/2022 10:39:05 AM
+Current Command: BldBlkStartApplication
+================================================
+Date >>>>> 12/4/2022 10:39:05 AM
+StartApplication
+================================================
+Date >>>>> 12/4/2022 10:39:06 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:06 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:06 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:06 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:06 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:07 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:07 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:07 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:07 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:07 AM
+Current Command: BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:08 AM
+StartExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:09 AM
+FinishExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:09 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:09 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:09 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:09 AM
+Current Command: BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:39:09 AM
+StartExecutorBuildingBlock:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:39:12 AM
+FinishExecutorBuildingBlock:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:39:35 AM
+FlowToHere: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:35 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 12/4/2022 10:39:35 AM
+Current Command: BldBlkStart
+================================================
+Date >>>>> 12/4/2022 10:39:35 AM
+Current Command: BldBlkStartApplication
+================================================
+Date >>>>> 12/4/2022 10:39:35 AM
+StartApplication
+================================================
+Date >>>>> 12/4/2022 10:39:35 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:35 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:36 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:36 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:36 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:36 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:36 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:36 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:37 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:37 AM
+Current Command: BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:37 AM
+StartExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:39 AM
+FinishExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 12/4/2022 10:39:39 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:39 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:39 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:39 AM
+Current Command: BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:39:39 AM
+StartExecutorBuildingBlock:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:39:41 AM
+FinishExecutorBuildingBlock:BldBlkGetUIText
+================================================
+Date >>>>> 12/4/2022 10:39:41 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:42 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 12/4/2022 10:39:42 AM
+FinishWithError:BldBlkSetUIElementValue
+================================================

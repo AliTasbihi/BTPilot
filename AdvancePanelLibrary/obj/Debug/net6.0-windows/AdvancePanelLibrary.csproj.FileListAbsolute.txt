@@ -1,0 +1,57 @@
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.csproj.AssemblyReference.cache
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.AssemblyInfoInputs.cache
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.AssemblyInfo.cs
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.csproj.CoreCompileInputs.cache
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\bin\Debug\net6.0-windows\AdvancePanelLibrary.deps.json
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\bin\Debug\net6.0-windows\AdvancePanelLibrary.dll
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\bin\Debug\net6.0-windows\AdvancePanelLibrary.pdb
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.dll
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\refint\AdvancePanelLibrary.dll
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.pdb
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\ref\AdvancePanelLibrary.dll
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.DialogForms.SelectComboBoxItemForm.resources
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.EditDesktopElement.EditDesktopElementForm.resources
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.EditImageCollection.EditImageCollectionForm.resources
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.PleaseWait.ShowPleaseWaitForm.resources
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.SelectUIElement.SelectUIElemetForm.resources
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.SelectUIElement.ShowDetailOfUIElement.resources
+D:\VS Projects\AdvancePanelLibrary\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.csproj.GenerateResource.cache
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.csproj.AssemblyReference.cache
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.DialogForms.SelectComboBoxItemForm.resources
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.EditDesktopElement.EditDesktopElementForm.resources
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.EditImageCollection.EditImageCollectionForm.resources
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.PleaseWait.ShowPleaseWaitForm.resources
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.SelectUIElement.SelectUIElemetForm.resources
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.SelectUIElement.ShowDetailOfUIElement.resources
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.csproj.GenerateResource.cache
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.AssemblyInfoInputs.cache
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.AssemblyInfo.cs
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.csproj.CoreCompileInputs.cache
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.dll
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\refint\AdvancePanelLibrary.dll
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.pdb
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\bin\Debug\net6.0-windows\AdvancePanelLibrary.deps.json
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\bin\Debug\net6.0-windows\AdvancePanelLibrary.dll
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\bin\Debug\net6.0-windows\AdvancePanelLibrary.pdb
+D:\VS Projects\AutoCreateWithJson\AdvancePanelLibrary\obj\Debug\net6.0-windows\ref\AdvancePanelLibrary.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\bin\Debug\net6.0-windows\AdvancePanelLibrary.deps.json
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\bin\Debug\net6.0-windows\AdvancePanelLibrary.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\bin\Debug\net6.0-windows\AdvancePanelLibrary.pdb
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.csproj.AssemblyReference.cache
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.DialogForms.SelectComboBoxItemForm.resources
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.EditDesktopElement.EditDesktopElementForm.resources
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.EditImageCollection.EditImageCollectionForm.resources
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.PleaseWait.ShowPleaseWaitForm.resources
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.SelectUIElement.SelectUIElemetForm.resources
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.Utility.SelectUIElement.ShowDetailOfUIElement.resources
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.csproj.GenerateResource.cache
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.AssemblyInfoInputs.cache
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.AssemblyInfo.cs
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\refint\AdvancePanelLibrary.dll
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\AdvancePanelLibrary.pdb
+C:\Users\Ali\Desktop\project\ConsoleApp1\AdvancePanelLibrary\obj\Debug\net6.0-windows\ref\AdvancePanelLibrary.dll
