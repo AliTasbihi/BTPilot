@@ -131,6 +131,20 @@ namespace AutoAdvPanelTest
         {
             if (comboBuildingBlock.Items.Count > 0)
                 comboBuildingBlock.SelectedIndex = 0;
+            //comboBuildingBlock.SelectedIndex = 0;
+            advancePanel1.ClearAll();
+            if (Directory.Exists(path) && Directory.GetFiles(path).Length != 0)
+            {
+                var fileInfos = Directory.GetFiles(path).Select(q => new FileInfo(q));
+                var orderByTime = fileInfos.OrderBy(q => q.LastWriteTime);
+                var fileLastAccsses = orderByTime.LastOrDefault();
+                if (fileLastAccsses != null)
+                {
+                    var bytes = File.ReadAllBytes(fileLastAccsses.FullName);
+                    var mcs = GlobalFunction.FromByteArrayToObject(bytes) as MyCustomSerialize;
+                    MyDeSerializeFactory.CreateInstance(mcs, advancePanel1);
+                }
+            }
         }
 
         private void lbl_ClearBuildingBlock_Click(object sender, EventArgs e)
@@ -368,44 +382,79 @@ namespace AutoAdvPanelTest
 
         private void lbl_SaveToFile_Click(object sender, EventArgs e)
         {
-            MyLog.ClearFile();
-            MyLog.WritelnBoth("Start Saveing ...");
-            MyLog.ActiveLog = false;
-            //var mcsd = new MyCustomSaveData(advancePanel1);
-            var mcs = new MyCustomSerialize(advancePanel1);
-
-            byte[] serialized;
-            BinaryFormatter bf = new BinaryFormatter();
-            using (MemoryStream ms = new MemoryStream())
+            if (!Directory.Exists(path))
             {
-                // bf.Serialize(ms, mcsd);
-                bf.Serialize(ms, mcs);
-                serialized = ms.ToArray();
+                Directory.CreateDirectory(path);
             }
-            File.WriteAllBytes(FilePath3, serialized);
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.InitialDirectory = path;
+            saveFileDialog.Filter = "BIN Files (*.bin)|*.bin";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var filePath = saveFileDialog.FileName;
+                MyLog.ClearFile();
+                //MyLog.ActiveLog = false;
+                //var mcsd = new MyCustomSaveData(advancePanel1);
+                var mcs = new MyCustomSerialize(advancePanel1);
+                byte[] serialized;
+                BinaryFormatter bf = new BinaryFormatter();
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    // bf.Serialize(ms, mcsd);
+                    bf.Serialize(ms, mcs);
+                    serialized = ms.ToArray();
+                }
+                File.WriteAllBytes(filePath, serialized);
+
+            }
+
+            //MyLog.ClearFile();
+            //MyLog.WritelnBoth("Start Saveing ...");
+            //MyLog.ActiveLog = false;
+            ////var mcsd = new MyCustomSaveData(advancePanel1);
+            //var mcs = new MyCustomSerialize(advancePanel1);
+
+            //byte[] serialized;
+            //BinaryFormatter bf = new BinaryFormatter();
+            //using (MemoryStream ms = new MemoryStream())
+            //{
+            //    // bf.Serialize(ms, mcsd);
+            //    bf.Serialize(ms, mcs);
+            //    serialized = ms.ToArray();
+            //}
+            //File.WriteAllBytes(FilePath3, serialized);
             MyLog.ActiveLog = true;
             MyLog.WritelnBoth("Start Finished");
         }
-
-
+        //todo:##
+        //اضافه کردن اپشن لود دیالوگ
+        private const string newFolder = "BTSave";
+        private string path = System.IO.Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
+            newFolder);
         private void lbl_LoadFromFile_Click(object sender, EventArgs e)
         {
-            //FilePath3 = @"C:\00\000000.flw";
-            if (!File.Exists(FilePath2))
+            if (!Directory.Exists(path))
             {
                 return;
             }
-            var bytes = File.ReadAllBytes(FilePath3);
-            var mcs = GlobalFunction.FromByteArrayToObject(bytes) as MyCustomSerialize;
-            MyDeSerializeFactory.CreateInstance(mcs, advancePanel1);
-
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.InitialDirectory = path;
+            fileDialog.Filter = "BIN Files (*.bin)|*.bin";
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var bytes = File.ReadAllBytes(fileDialog.FileName);
+                var mcs = GlobalFunction.FromByteArrayToObject(bytes) as MyCustomSerialize;
+                MyDeSerializeFactory.CreateInstance(mcs, advancePanel1);
+            }
+            //FilePath3 = @"C:\00\000000.flw";
 
             /*
             var jsonReadAllText = File.ReadAllText("c:\\00\\1.json");
             var serializer = new DataContractJsonSerializer(typeof(MyCustomSerialize)); 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(jsonReadAllText));
             var mcs = (MyCustomSerialize)serializer.ReadObject(ms);
-           
+
 
             // advancePanel1.ClearAll();
 

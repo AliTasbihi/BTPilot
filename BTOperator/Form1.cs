@@ -122,6 +122,8 @@ namespace AutoCreateWithJson
         //todo:##modified tasbihi
         private void Form1_Load(object sender, EventArgs e)
         {
+
+
             comboBuildingBlock.SelectedIndex = 0;
            advancePanel1.ClearAll();
             if (Directory.Exists(path)&&Directory.GetFiles(path).Length!=0)
@@ -161,7 +163,7 @@ namespace AutoCreateWithJson
             var compPath = GlobalFunction.GetFilesDirectory("Component\\BuildingBlocks\\" + comboCategory.Text);
             var files = Directory.EnumerateFiles(compPath, "*.cs", SearchOption.TopDirectoryOnly);
             foreach (var file in files)
-            {
+            {               
                 var fileName = Path.GetFileNameWithoutExtension(file);
                 comboBuildingBlock.Items.Add(fileName);
             }

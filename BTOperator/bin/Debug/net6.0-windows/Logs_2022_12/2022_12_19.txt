@@ -109,3 +109,9 @@ StartExecutorBuildingBlock:BldBlkSetUIElementValue
 Date >>>>> 12/19/2022 2:02:04 PM
 FinishExecutorBuildingBlock:BldBlkSetUIElementValue
 ================================================
+Date >>>>> 12/19/2022 2:16:51 PM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 12/19/2022 2:16:52 PM
+Player Error >>>>> هیچ نقطه شروعی پیدا نشد
+================================================
