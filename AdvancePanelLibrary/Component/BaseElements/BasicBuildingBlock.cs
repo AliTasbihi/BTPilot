@@ -885,9 +885,31 @@ namespace AdvancePanelLibrary.Component.BaseElements
                 return null;
             }
         }
-        
-            #endregion
+
+        #endregion
+        //todo:##
+        //توابع کمکی 
+
+        #region addToProjectByTasbihi
+        public ElmArrowButton OutPutArrowByElementName(string elementName)
+        {
+            var elm = ElementByName($"{elementName}ConnectorLinkOut");
+            if (elm == null) return null;
+            if (elm is ElmConnector cntr)
+            {
+                var arrows = advancePanel.GetArrowsWithStart(cntr);
+                return arrows.Count > 0 ? arrows[0] : null;
+            }
+
+            return null;
+            {
+
+            }
         }
+
+
+        #endregion
+
 
 
     }

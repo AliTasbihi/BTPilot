@@ -4,7 +4,9 @@ using AdvancePanelLibrary.PlayerExecutiton;
 using AdvancePanelLibrary.Utility;
 using AdvancePanelLibrary.Utility.Log;
 using AdvancePanelLibrary.Utility.SelectUIElement;
+using AutoCreateWithJson.Utility.Log;
 using FlaUI.Core.AutomationElements;
+using FlaUI.Core.AutomationElements.Scrolling;
 using FlaUI.Core.Input;
 using FlaUI.Core.Tools;
 using System;
@@ -14,6 +16,8 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using FlaUI.Core.Definitions;
+using Button = FlaUI.Core.AutomationElements.Button;
 
 namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
 {
@@ -22,92 +26,127 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         private AutomationElement[] foundElements;
         private int currentIndex;
 
-        #region Connector Property  
+        #region Connector Property
+        //todo:##
+        #region WriteTasbihi
+        private object GetNotFoundElement(object sender)
+        {
+            var getOutPutArrowByElementName = OutPutArrowByElementName(nameNotFound);
+            if (getOutPutArrowByElementName != null)
+            {
+                return getOutPutArrowByElementName.ConnectorEnd != null ? true : false;
+            }
+
+            return false;
+        }
+
+        #endregion
         private object GetSelectCondition(object sender)
         {
             return GetConnectorPropertySelectElementCondition(sueSelectUIElement, sueSelectUIElement);
         }
+
         private object GetMethod(object sender)
         {
             return ElementByName(sueComboMethod);
         }
+  
         private object GetButton(object sender)
         {
             return ElementByName(sueComboButton);
         }
+
         private object GetSpeed(object sender)
         {
             return ElementByName(sueSpeed);
         }
+
         private object GetFoundElement(object sender)
         {
             return GetConnectorPropertyFoundElement(foundElements, currentIndex);
         }
+
         private object GetPositionFound(object sender)
         {
             return GetConnectorPropertyPositionFound(foundElements);
         }
+
         private object GetPositionFoundX(object sender)
         {
             return GetConnectorPropertyPositionFoundX(foundElements, currentIndex);
         }
+
         private object GetPositionFoundY(object sender)
         {
             return GetConnectorPropertyPositionFoundY(foundElements);
         }
+
         private object GetAreaFound(object sender)
         {
             return GetConnectorPropertyAreaFound(foundElements);
         }
+
         private object GetAreaFoundX(object sender)
         {
             return GetConnectorPropertyAreaFoundX(foundElements);
         }
+
         private object GetAreaFoundY(object sender)
         {
             return GetConnectorPropertyAreaFoundY(foundElements);
         }
+
         private object GetAreaFoundWidth(object sender)
         {
             return GetConnectorPropertyAreaFoundWidth(foundElements);
         }
+
         private object GetAreaFoundHeight(object sender)
         {
             return GetConnectorPropertyAreaFoundHeight(foundElements);
         }
+
         private object GetSourceElement(object sender)
         {
             var arrow = InputArrowByElementName(lblSourceElement);
             return arrow != null ? arrow.TransferData : null;
         }
+
         private object GetUseOccur(object sender)
         {
             return ElementByName(lblUseOccur);
         }
+
         private object GetCount(object sender)
         {
             return foundElements != null ? foundElements.Length : 0;
         }
+
         private object GetCurrentIndex(object sender)
         {
             return currentIndex;
         }
+
         private object GetDefaultTimeout(object sender)
         {
             return GetConnectorPropertyCheckBox(chkDefaultTimeout, chkDefaultTimeout);
         }
+
         private object GetTimeout(object sender)
         {
             return GetConnectorPropertyEditBox(edTimeout, edTimeout);
         }
+
         private object GetAwaitNoChanges(object sender)
         {
             return GetConnectorPropertyCheckBox(chkAwaitNoChanges, chkAwaitNoChanges);
         }
+
         private object GetAwaitTimeout(object sender)
         {
             return 0;
         }
+
         #endregion
 
         public BldBlkClickUIElement()
@@ -160,6 +199,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
 
         private const string chkAwaitNoChanges = "chkAwaitNoChanges";
+
         private void AddAwaitNoChanges()
         {
             var chk = new ElmCheckBox(this);
@@ -189,6 +229,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
 
         private const string edTimeout = "edTimeout";
+
         private void AddTimeout()
         {
             var edt = new ElmEditBox(this);
@@ -205,6 +246,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
 
         private const string chkDefaultTimeout = "chkDefaultTimeout";
+
         private void AddDefaultTimeout()
         {
             var chk = new ElmCheckBox(this);
@@ -217,6 +259,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
 
             Children.Add(new ElmSeparateLine());
         }
+
         private void AddCount()
         {
             var lbl = new ElmLabel(this);
@@ -230,6 +273,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
 
         private const string lblCompleted = "lblCompleted";
+
         private void AddCompleted()
         {
             var lbl = new ElmLabel(this);
@@ -243,7 +287,9 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
             Children.Add(lbl);
             Children.Add(new ElmSeparateLine());
         }
+
         private const string lblCurrentIndex = "lblCurrentIndex";
+
         private void AddCurrentIndex()
         {
             var lbl = new ElmLabel(this);
@@ -259,6 +305,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
 
         private const string lblUseOccur = "lblUseOccur";
+
         private void AddUseOccur()
         {
             var combo = new ElmComboBox(this);
@@ -299,6 +346,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
 
         private const string lblSourceElement = "lblSourceElement";
+
         private void AddSourceElement()
         {
             var lbl = new ElmLabel(this);
@@ -388,13 +436,14 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
 
             Children.Add(new ElmSeparateLine());
         }
-
+        private const string nameNotFound = "Not found";
         private void AddNotFound()
         {
             var lbl = new ElmLabel(this);
             lbl.IsNecessaryToView = 0;
             lbl.Padding = new Padding(10, 0, 10, 0);
             lbl.Title = "Not found";
+            lbl.Name = nameNotFound;
             lbl.Alinment = ContentAlignment.MiddleRight;
             lbl.AddOneConnector(false, Color.Green, 0);
             Children.Add(lbl);
@@ -402,6 +451,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
 
         private const string lblFoundElement = "lblFoundElement";
+
         private void AddFoundElement()
         {
             var lbl = new ElmLabel(this);
@@ -419,6 +469,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         private const string sueComboMethod = "sueComboMethod";
         private const string sueComboButton = "sueComboButton";
         private const string sueSpeed = "sueSpeed";
+
         private void AddMethodMouseClick()
         {
             var combo = new ElmComboBox(this);
@@ -464,6 +515,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
 
         private const string sueSelectUIElement = "sueSelectUIElement";
+
         private void AddSelectUIElement()
         {
             var sue = new ElmSelectUIElement(this);
@@ -498,65 +550,474 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         ///
         //////////////////////////////////
 
+        //#region EXECUTOR
+
+        //public override void SetExecuteInit()
+        //{
+        //    StatusOfExecution = StatusOfExecutionEnum.None;
+        //}
+
+        //public override bool ExecuteBuildingBlock(GlobalVariablePlayer globalVariablePlayer)
+        //{
+        //    try
+        //    {
+        //        MyLog.WritelnBoth($"Block: {GlobalFunction.BuildingBlockComponentDecompress(GlobalFunction.GetTypeLastClass(GetType()))} ({this.DebugID})"); 
+        //        foundElements = null;
+        //        var timeout = (string)GetTimeout(null);
+        //        TimeSpan timeSpan = GlobalFunction.ConvertToTimeSpan(timeout);
+        //        var selectElementStoreable = (SelectElementStoreable)GetSelectCondition(null);
+
+        //        var sourceElement = (AutomationElement)GetSourceElement(null);
+        //        var elements = GetElementsWithConditionTimeout(globalVariablePlayer, sourceElement, selectElementStoreable, timeSpan);
+
+        //        if (elements is null || elements.Length == 0)
+        //        {
+        //            StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+        //            return false;
+        //        }
+        //        foundElements = elements;
+        //        currentIndex = 0;
+        //        var occure = (ElmComboBox)GetUseOccur(null);
+        //        if (occure.SelectedText == "All")
+        //        {
+        //            for (var i = 0; i < foundElements.Length; i++)
+        //            {
+        //                currentIndex = i;
+        //                ElementClick(foundElements[i]);
+        //            }
+        //        }
+        //        else
+        //        {
+        //            var getIndexOccure = Convert.ToInt32(occure.SelectedText);
+        //            ElementClick(foundElements[getIndexOccure - 1]);
+        //        }
+
+        //        StatusOfExecution = StatusOfExecutionEnum.Finish;
+
+        //        return true;
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MyLog.WritelnBoth("FinishWithError", e.Message);
+        //        StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+        //        return false;
+        //    }
+        //    finally
+        //    {
+        //        if (IsSuccessfullyStatusOfExecution())
+        //        {
+        //            UpdateAllDataOfArrows();
+        //        }
+        //    }
+        //}
+
+        //public override StatusOfExecutionEnum GetExecuteStatus()
+        //{
+        //    return StatusOfExecution;
+        //}
+        //#endregion
+
+        //public void ElementClick(AutomationElement automationElement)
+        //{
+        //    var method = ((ElmComboBox)GetMethod(null)).SelectedText;
+        //    var mouseClick = ((ElmComboBox)GetButton(null)).SelectedText;
+
+        //    var elementViewModel = new ElementViewModel(automationElement);
+        //    var allItems = elementViewModel.AllItems;
+        //    var className = SearchInDetailElement.GetClassName(allItems);
+        //    if (className.Equals("Button", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        var btn = automationElement.AsButton();
+        //        if (method == "Invoke")
+        //        {
+        //            btn.Invoke();
+        //        }
+        //        else if (method == "Click")
+        //        {
+        //            btn.Click();
+        //        }
+        //    }
+        //    else if (className.Equals("RadioButton", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        var rb = automationElement.AsRadioButton();
+        //        rb.IsChecked = true;
+        //    }
+        //    else if (className.Equals("DataGridCell", StringComparison.OrdinalIgnoreCase))
+        //    {
+        //        var cell = automationElement.AsGridCell();
+        //        switch (mouseClick)
+        //        {
+        //            case "Left":
+        //                cell.Click();
+        //                break;
+        //            case "Right":
+        //                cell.RightClick();
+        //                break;
+        //            case "Middle":
+        //                break;
+        //            case "Double Left":
+        //                cell.DoubleClick();
+        //                break;
+        //            case "Double Right":
+        //                cell.RightDoubleClick();
+        //                break;
+        //            case "Double Middle":
+        //                break;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        try
+        //        {
+        //            switch (mouseClick)
+        //            {
+        //                case "Left":
+        //                    automationElement.Click();
+        //                    break;
+        //                case "Right":
+        //                    automationElement.RightClick();
+        //                    break;
+        //                case "Middle":
+        //                    throw new Exception("Not Support");
+        //                    break;
+        //                case "Double Left":
+        //                    //Mouse.DoubleClick(MouseButton.Left);
+        //                    automationElement.DoubleClick();
+        //                    break;
+        //                case "Double Right":
+        //                    automationElement.RightDoubleClick();
+        //                    break;
+        //                case "Double Middle":
+        //                    throw new Exception("Not Support");
+        //                    break;
+        //            }
+        //        }
+        //        catch 
+        //        {
+        //            var p = automationElement.GetClickablePoint();
+        //            Mouse.MoveTo(p.X, p.Y);
+        //            switch (mouseClick)
+        //            {
+        //                case "Left":
+        //                    Mouse.Click(MouseButton.Left);
+        //                    break;
+        //                case "Right":
+        //                    Mouse.Click(MouseButton.Right);
+        //                    break;
+        //                case "Middle":
+        //                    Mouse.Click(MouseButton.Middle);
+        //                    break;
+        //                case "Double Left":
+        //                    Mouse.DoubleClick(MouseButton.Left);
+        //                    break;
+        //                case "Double Right":
+        //                    Mouse.DoubleClick(MouseButton.Right);
+        //                    break;
+        //                case "Double Middle":
+        //                    Mouse.DoubleClick(MouseButton.Middle);
+        //                    break;
+        //            }
+
+        //        }
+        //    }
+        //}
+        //todo:##
         #region EXECUTOR
         public override void SetExecuteInit()
         {
+
             StatusOfExecution = StatusOfExecutionEnum.None;
         }
 
         public override bool ExecuteBuildingBlock(GlobalVariablePlayer globalVariablePlayer)
         {
+            OccureLog.StartExecutorBuildingBlock(this);
             try
             {
-                MyLog.WritelnBoth($"Block: {GlobalFunction.BuildingBlockComponentDecompress(GlobalFunction.GetTypeLastClass(GetType()))} ({this.DebugID})"); 
-                foundElements = null;
                 var timeout = (string)GetTimeout(null);
                 TimeSpan timeSpan = GlobalFunction.ConvertToTimeSpan(timeout);
                 var selectElementStoreable = (SelectElementStoreable)GetSelectCondition(null);
-
                 var sourceElement = (AutomationElement)GetSourceElement(null);
                 var elements = GetElementsWithConditionTimeout(globalVariablePlayer, sourceElement, selectElementStoreable, timeSpan);
-
-                if (elements is null || elements.Length == 0)
+                if (elements == null || elements.Length == 0)
                 {
-                    StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
-                    return false;
-                }
-                foundElements = elements;
-                currentIndex = 0;
-                var occure = (ElmComboBox)GetUseOccur(null);
-                if (occure.SelectedText == "All")
-                {
-                    for (var i = 0; i < foundElements.Length; i++)
+                    //for eleman not found
+                    if ((bool)GetNotFoundElement(null))
                     {
-                        currentIndex = i;
-                        ElementClick(foundElements[i]);
+                        OccureLog.RunElementNotFound(this);
+                        throw new Exception("dont write");
+                        //StatusOfExecution = StatusOfExecutionEnum.FinishWithErrorRunNotFound;
+                        return true;
                     }
+                    else
+                    {
+                        //
+                        OccureLog.FinishWithErrorExecutorBuildingBlock(this);
+                        StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                        return false;
+                    }
+                }
+                bool resultClick = Click(elements);
+                if (resultClick)
+                {
+                    StatusOfExecution = StatusOfExecutionEnum.Finish;
+                    OccureLog.FinishExecutorBuildingBlock(this);
+                    return resultClick;
                 }
                 else
                 {
-                    var getIndexOccure = Convert.ToInt32(occure.SelectedText);
-                    ElementClick(foundElements[getIndexOccure - 1]);
+                    StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                    OccureLog.FinishWithErrorExecutorBuildingBlock(this);
+                    return resultClick;
                 }
 
-                StatusOfExecution = StatusOfExecutionEnum.Finish;
+            }
+            catch (Exception e)
+            {
+                OccureLog.FinishWithErrorExecutorBuildingBlock(this, e);
+                StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                return false;
+            }
+
+
+            //MyLog.WritelnFile("error",globalVariablePlayer.ToString());
+            //MyLog.WritelnBoth("BldBlkClickUIElement");
+            //foundElements = null;
+            //var cse = ((SelectElementStoreable)GetSelectCondition(null)).ConditionForSelectElement;
+            //var elements = cse.GetTargetElements(globalVariablePlayer.CurrentMainWindow);
+            //if (elements is null || elements.Length == 0)
+            //{
+            //    StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+            //    return false;
+            //}
+            //foundElements = elements;
+            //var elementViewModel = new ElementViewModel(foundElements[0]);
+            //var allItems = elementViewModel.AllItems;
+            //var className = SearchInDetailElement.GetClassName(allItems);
+            //if (className.Equals("Button", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    var btn = elements[0].AsButton();
+            //    btn.Invoke();
+
+            //}
+            //else if (className.Equals("RadioButton", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    var rb = elements[0].AsRadioButton();
+            //    rb.IsChecked = true;
+            //}
+            //else if (className.Equals("DataGridCell", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    var cell = elements[0].AsGridCell();
+            //    var mouseClick = ((ElmEditBox)ElementByName(sueComboButton)).Text;
+            //    switch (mouseClick)
+            //    {
+            //        case "Left":
+            //            cell.Click();
+            //            break;
+            //        case "Right":
+            //            cell.RightClick();
+            //            break;
+            //        case "Middle":
+            //            break;
+            //        case "Double Left":
+            //            cell.DoubleClick();
+            //            break;
+            //        case "Double Right":
+            //            cell.RightDoubleClick();
+            //            break;
+            //        case "Double Middle":
+            //            break;
+            //    }
+
+            //}
+
+
+            //StatusOfExecution = StatusOfExecutionEnum.Finish;
+            //if (StatusOfExecution == StatusOfExecutionEnum.Finish)
+            //{
+            //    UpdateAllDataOfArrows();
+            //}
+            //return true;
+        }
+        //result thread 
+        private delegate bool ActionMethod<T>(T item);
+        private ActionMethod<AutomationElement> action;
+        private bool Click(AutomationElement[] automationElements1)
+        {
+            try
+            {
+                var occure = (ElmComboBox)GetUseOccur(null);
+                var getIndexOccure = Convert.ToInt32(occure.SelectedText);
+                AutomationElement selectedElement = automationElements1[getIndexOccure - 1];
+                var selectedComboBox = (ElmComboBox)GetMethod(null);
+                string selectedItemText = selectedComboBox.SelectedText;
+                if (string.Equals(selectedItemText, "Click", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    switch (selectedElement.ControlType)
+                    {
+                        case ControlType.Button:
+                            action = ClickButton;
+                            break;
+                        case ControlType.CheckBox:
+                            action = ClickButton;
+                            break;
+                        case ControlType.Custom:
+                            action = ClickButton;
+                            break;
+                        case ControlType.RadioButton:
+                            action = ClickButton;
+                            break;
+                        case ControlType.HeaderItem:
+                            action = ClickButton;
+                            break;
+                        case ControlType.ScrollBar:
+                            action = ClickForVerticalScroll;
+                            break;
+                    }
+                }
+                else if (string.Equals(selectedItemText, "Invoke", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    switch (selectedElement.ControlType)
+                    {
+                        case ControlType.Button:
+                            action = ClickInvoke;
+                            break;
+                    }
+
+                }
+                if (action != null)
+                {
+                   return action(selectedElement);
+                }
+                else
+                {
+                    OccureLog.ErrorInClick(this);
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                OccureLog.ErrorInClick(this, e);
+                return false;
+            }
+        }
+
+        private bool ClickForVerticalScroll(AutomationElement automationElement)
+        {
+            try
+            {
+                var asVerticalScrollBar = automationElement.AsVerticalScrollBar();
+                asVerticalScrollBar.ScrollDown();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+          
+        }
+
+        private bool ClickInvoke(AutomationElement automationElement)
+        {
+            try
+            {
+                var asButton = automationElement.AsButton();
+                asButton.Invoke();
+                return true;
+            }
+            catch (Exception e)
+            {
+                OccureLog.ErrorInClick(this, e);
+                return false;
+            }
+
+        }
+
+        private bool ClickButton(AutomationElement automationElement)
+        {
+            try
+            {
+                ElmComboBox comboBox = (ElmComboBox)GetButton(null);
+                string selectedText = comboBox.SelectedText;
+                bool resultFocus = CanFocus(automationElement);
+                if (resultFocus)
+                {
+                    automationElement.Focus();
+                }
+                switch (selectedText)
+                {
+                    case "Left":
+                        automationElement.Click();
+                        break;
+                    case "Right":
+                        automationElement.RightClick();
+                        break;
+                    case "Middle":
+                        break;
+                    case "Double Left":
+                        automationElement.DoubleClick();
+                        break;
+                    case "Double Right":
+                        automationElement.RightDoubleClick();
+                        break;
+                    case "Double Middle":
+                        break;
+                }
 
                 return true;
             }
             catch (Exception e)
             {
-                MyLog.WritelnBoth("FinishWithError", e.Message);
-                StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                OccureLog.ErrorInClick(this, e);
                 return false;
             }
-            finally
-            {
-                if (IsSuccessfullyStatusOfExecution())
-                {
-                    UpdateAllDataOfArrows();
-                }
-            }
         }
+
+        private bool CanFocus(AutomationElement automationElement)
+        {
+            if (automationElement.ControlType == ControlType.HeaderItem)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private AutomationElement[] automationElements;
+        //private AutomationElement[] GetElements(GlobalVariablePlayer globalVariablePlayer)
+        //{
+        //    try
+        //    {
+        //        var selectElementStoreable = (SelectElementStoreable)GetSelectCondition(null);
+        //        if (selectElementStoreable != null)
+        //        {
+        //            var conditionElement = selectElementStoreable.ConditionForSelectElement;
+        //            AutomationElement[] targetElements = conditionElement.GetTargetElements(globalVariablePlayer.CurrentMainWindow);
+        //            if (targetElements == null || targetElements.Length == 0)
+        //            {
+        //                OccureLog.ErrorToFindTargetElement(this);
+        //                return null;
+
+        //            }
+        //            else
+        //            {
+        //                return targetElements;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            OccureLog.ErrorToFindTargetElement(this);
+        //            return null;
+        //        }
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        OccureLog.ErrorToFindTargetElement(this, e);
+        //        return null;
+        //    }
+
+        //}
 
         public override StatusOfExecutionEnum GetExecuteStatus()
         {
@@ -564,108 +1025,8 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
         #endregion
 
-        public void ElementClick(AutomationElement automationElement)
-        {
-            var method = ((ElmComboBox)GetMethod(null)).SelectedText;
-            var mouseClick = ((ElmComboBox)GetButton(null)).SelectedText;
-
-            var elementViewModel = new ElementViewModel(automationElement);
-            var allItems = elementViewModel.AllItems;
-            var className = SearchInDetailElement.GetClassName(allItems);
-            if (className.Equals("Button", StringComparison.OrdinalIgnoreCase))
-            {
-                var btn = automationElement.AsButton();
-                if (method == "Invoke")
-                {
-                    btn.Invoke();
-                }
-                else if (method == "Click")
-                {
-                    btn.Click();
-                }
-            }
-            else if (className.Equals("RadioButton", StringComparison.OrdinalIgnoreCase))
-            {
-                var rb = automationElement.AsRadioButton();
-                rb.IsChecked = true;
-            }
-            else if (className.Equals("DataGridCell", StringComparison.OrdinalIgnoreCase))
-            {
-                var cell = automationElement.AsGridCell();
-                switch (mouseClick)
-                {
-                    case "Left":
-                        cell.Click();
-                        break;
-                    case "Right":
-                        cell.RightClick();
-                        break;
-                    case "Middle":
-                        break;
-                    case "Double Left":
-                        cell.DoubleClick();
-                        break;
-                    case "Double Right":
-                        cell.RightDoubleClick();
-                        break;
-                    case "Double Middle":
-                        break;
-                }
-            }
-            else
-            {
-                try
-                {
-                    switch (mouseClick)
-                    {
-                        case "Left":
-                            automationElement.Click();
-                            break;
-                        case "Right":
-                            automationElement.RightClick();
-                            break;
-                        case "Middle":
-                            throw new Exception("Not Support");
-                            break;
-                        case "Double Left":
-                            Mouse.DoubleClick(MouseButton.Left);
-                            break;
-                        case "Double Right":
-                            automationElement.RightDoubleClick();
-                            break;
-                        case "Double Middle":
-                            throw new Exception("Not Support");
-                            break;
-                    }
-                }
-                catch 
-                {
-                    var p = automationElement.GetClickablePoint();
-                    Mouse.MoveTo(p.X, p.Y);
-                    switch (mouseClick)
-                    {
-                        case "Left":
-                            Mouse.Click(MouseButton.Left);
-                            break;
-                        case "Right":
-                            Mouse.Click(MouseButton.Right);
-                            break;
-                        case "Middle":
-                            Mouse.Click(MouseButton.Middle);
-                            break;
-                        case "Double Left":
-                            Mouse.DoubleClick(MouseButton.Left);
-                            break;
-                        case "Double Right":
-                            Mouse.DoubleClick(MouseButton.Right);
-                            break;
-                        case "Double Middle":
-                            Mouse.DoubleClick(MouseButton.Middle);
-                            break;
-                    }
-                    
-                }
-            }
-        }
     }
+
 }
+
+

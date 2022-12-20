@@ -126,7 +126,8 @@ namespace AutoAdvPanelTest
         {
             textBox1.Text = "";
         }
-
+        //todo:##
+        //زمانی که برنامه بالا بیاد اخرین فایل ویرایش شده نمایش داده میشود
         private void Form1_Load(object sender, EventArgs e)
         {
             if (comboBuildingBlock.Items.Count > 0)
@@ -432,6 +433,9 @@ namespace AutoAdvPanelTest
         private string path = System.IO.Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.Desktop),
             newFolder);
+        //todo:##
+        //قابلیت
+        //لود کردن فایل های سیو شده
         private void lbl_LoadFromFile_Click(object sender, EventArgs e)
         {
             if (!Directory.Exists(path))

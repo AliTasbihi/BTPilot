@@ -419,7 +419,6 @@ namespace AutoCreateWithJson.Component.BuildingBlocks.DesktopUI
             combo.Items.Add("Double Middle");
             combo.SelectedText = "Left";
             Children.Add(combo);
-
             combo = new ElmComboBox(this);
             combo.Name = sueSpeed;
             combo.IsNecessaryToView = 0;
@@ -432,7 +431,6 @@ namespace AutoCreateWithJson.Component.BuildingBlocks.DesktopUI
             combo.Items.Add("Instantaneous");
             combo.SelectedText = "Medium";
             Children.Add(combo);
-
             Children.Add(new ElmSeparateLine());
         }
 
