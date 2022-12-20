@@ -583,10 +583,9 @@ namespace AutoCreateWithJson.Component.BuildingBlocks.DesktopUI
                     {
                         case ControlType.Edit:
                             elmLabel.Content = automationElement.AsTextBox().Text;
-                            break;
+                            break; 
                             return true;
                     }
-
                     return true ? elmLabel.Content != string.Empty : false;
                 }
             }
@@ -595,7 +594,6 @@ namespace AutoCreateWithJson.Component.BuildingBlocks.DesktopUI
                 OccureLog.ErrorToGetValue(this, e);
                 return false;
             }
-
         }
 
         public override StatusOfExecutionEnum GetExecuteStatus()

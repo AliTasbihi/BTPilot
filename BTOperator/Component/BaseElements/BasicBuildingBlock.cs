@@ -904,7 +904,6 @@ namespace AutoCreateWithJson.Component.BaseElements
                     OccureLog.ErrorToFindTargetElement(this);
                     return null;
                 }
-
             }
             catch (Exception e)
             {

@@ -3,12 +3,16 @@ using AdvancePanelLibrary.Component.BaseStructure;
 using AdvancePanelLibrary.PlayerExecutiton;
 using AdvancePanelLibrary.Utility;
 using AdvancePanelLibrary.Utility.Log;
+using AutoCreateWithJson.Utility.Log;
 using FlaUI.Core.AutomationElements;
+using FlaUI.Core.WindowsAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FlaUI.Core.Definitions;
+using FlaUI.Core.Input;
 
 namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
 {
@@ -16,6 +20,24 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
     {
         private AutomationElement[] foundElements;
         private int currentIndex;
+        //todo:##
+        //کانکتر پراپرتی ها اضافه شده
+
+        #region addConnectroPropertyTasbihi
+
+        private object IsNotFoundElementConnect(object sender)
+        {
+            var getOutPutArrowByElementName = OutPutArrowByElementName(nameNotFound);
+            if (getOutPutArrowByElementName != null)
+            {
+                return getOutPutArrowByElementName.ConnectorEnd != null ? true : false;
+            }
+
+            return false;
+        }
+        private object GetOccure(object sender) => ElementByName(lblUseOccur);
+
+        #endregion
 
         #region Connector Property  
         private object GetSelectCondition(object sender)
@@ -373,11 +395,12 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
 
             Children.Add(new ElmSeparateLine());
         }
-
+        private const string nameNotFound = "Notfound";
         private void AddNotFound()
         {
             var lbl = new ElmLabel(this);
             lbl.IsNecessaryToView = 0;
+            lbl.Name = nameNotFound;
             lbl.Padding = new Padding(10, 0, 10, 0);
             lbl.Title = "Not found";
             lbl.Alinment = ContentAlignment.MiddleRight;
@@ -511,6 +534,55 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         //////////////////////////////////
 
         #region EXECUTOR
+        //public override void SetExecuteInit()
+        //{
+        //    StatusOfExecution = StatusOfExecutionEnum.None;
+        //}
+
+        //public override bool ExecuteBuildingBlock(GlobalVariablePlayer globalVariablePlayer)
+        //{
+        //    MyLog.WritelnBoth($"Block: {GlobalFunction.BuildingBlockComponentDecompress(GlobalFunction.GetTypeLastClass(GetType()))} ({this.DebugID})");
+        //    //var cse = ((ElmSelectUIElement)ElementByName(sueSelectUIElement)).SelectElementStoreable.ConditionForSelectElement;
+        //    //var elements = cse.GetTargetElements(globalVariablePlayer.CurrentMainWindow);
+        //    var timeout = (string)GetTimeout(null);
+        //    TimeSpan timeSpan = GlobalFunction.ConvertToTimeSpan(timeout);
+        //    var selectElementStoreable = (SelectElementStoreable)GetSelectCondition(null);
+
+        //    var sourceElement = (AutomationElement)GetSourceElement(null);
+        //    var elements = GetElementsWithConditionTimeout(globalVariablePlayer, sourceElement, selectElementStoreable, timeSpan);
+
+        //    if (elements is null || elements.Length == 0)
+        //    {
+        //        StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+        //        return false;
+        //    }
+        //    foundElements = elements;
+        //    currentIndex = 0;
+
+        //    globalVariablePlayer.CurrentMainWindow.SetForeground();
+        //    var txtBox = elements[0].AsTextBox();
+        //    txtBox.Text = (string)GetTextValue(null);
+
+
+        //    StatusOfExecution = StatusOfExecutionEnum.Finish;
+        //    if (IsSuccessfullyStatusOfExecution())
+        //    {
+        //        UpdateAllDataOfArrows();
+        //    }
+
+        //    return true;
+
+        //}
+
+        //public override StatusOfExecutionEnum GetExecuteStatus()
+        //{
+        //    return StatusOfExecution;
+        //}
+        #endregion
+        //todo:##
+        //روش دیگر برای اکسکیوتر
+        #region write Tasbihi
+        #region EXECUTOR
         public override void SetExecuteInit()
         {
             StatusOfExecution = StatusOfExecutionEnum.None;
@@ -518,38 +590,266 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
 
         public override bool ExecuteBuildingBlock(GlobalVariablePlayer globalVariablePlayer)
         {
-            MyLog.WritelnBoth($"Block: {GlobalFunction.BuildingBlockComponentDecompress(GlobalFunction.GetTypeLastClass(GetType()))} ({this.DebugID})");
-            //var cse = ((ElmSelectUIElement)ElementByName(sueSelectUIElement)).SelectElementStoreable.ConditionForSelectElement;
-            //var elements = cse.GetTargetElements(globalVariablePlayer.CurrentMainWindow);
-            var timeout = (string)GetTimeout(null);
-            TimeSpan timeSpan = GlobalFunction.ConvertToTimeSpan(timeout);
-            var selectElementStoreable = (SelectElementStoreable)GetSelectCondition(null);
+            OccureLog.StartExecutorBuildingBlock(this);
+            try
+            {
+                var timeout = (string)GetTimeout(null);
+                TimeSpan timeSpan = GlobalFunction.ConvertToTimeSpan(timeout);
+                var selectElementStoreable = (SelectElementStoreable)GetSelectCondition(null);
+                var sourceElement = (AutomationElement)GetSourceElement(null);
+                var elements = GetElementsWithConditionTimeout(globalVariablePlayer, sourceElement, selectElementStoreable, timeSpan);
+                if (elements == null || elements.Length == 0)
+                {
+                    //for eleman not found
+                    if ((bool)IsNotFoundElementConnect(null))
+                    {
+                        OccureLog.RunElementNotFound(this);
+                        throw new Exception("write this text");
+                        //StatusOfExecution = StatusOfExecutionEnum.FinishWithErrorRunNotFound;
+                        return true;
+                    }
+                    else
+                    {
+                        //
+                        OccureLog.FinishWithErrorExecutorBuildingBlock(this);
+                        StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                        return true;
+                    }
+                }
 
-            var sourceElement = (AutomationElement)GetSourceElement(null);
-            var elements = GetElementsWithConditionTimeout(globalVariablePlayer, sourceElement, selectElementStoreable, timeSpan);
+                bool resultSet = Set(elements);
+                if (resultSet)
+                {
+                    StatusOfExecution = StatusOfExecutionEnum.Finish;
+                    OccureLog.FinishExecutorBuildingBlock(this);
+                    UpdateAllDataOfArrows();
+                    return resultSet;
+                }
+                else
+                {
+                    StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                    OccureLog.FinishWithErrorExecutorBuildingBlock(this);
+                    return resultSet;
+                }
 
-            if (elements is null || elements.Length == 0)
+            }
+            catch (Exception e)
             {
                 StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                OccureLog.FinishWithErrorExecutorBuildingBlock(this);
                 return false;
             }
-            foundElements = elements;
-            currentIndex = 0;
-
-            globalVariablePlayer.CurrentMainWindow.SetForeground();
-            var txtBox = elements[0].AsTextBox();
-            txtBox.Text = (string)GetTextValue(null);
 
 
-            StatusOfExecution = StatusOfExecutionEnum.Finish;
-            if (IsSuccessfullyStatusOfExecution())
+            //MyLog.WritelnBoth("SetUIElementValue");
+            //var cse = ((ElmSelectUIElement)ElementByName(sueSelectUIElement)).SelectElementStoreable.ConditionForSelectElement;
+            //var elements = cse.GetTargetElements(globalVariablePlayer.CurrentMainWindow);
+            //if (elements is null || elements.Length == 0)
+            //{
+            //    StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+            //    return false;
+            //}
+
+            //globalVariablePlayer.CurrentMainWindow.SetForeground();
+            //var txtBox = elements[0].AsTextBox();
+            //txtBox.Text = (string)GetTextValue(null);
+
+
+        }
+
+        private delegate bool ActionMethod<T>(T item);
+        private ActionMethod<AutomationElement> action;
+        private bool Set(AutomationElement[] automationElements1)
+        {
+            var occure = (ElmComboBox)GetOccure(null);
+            var getIndexOccure = Convert.ToInt32(occure.SelectedText);
+            AutomationElement selectedElement = automationElements1[getIndexOccure - 1];
+            try
             {
-                UpdateAllDataOfArrows();
+                switch (selectedElement.ControlType)
+                {
+                    case ControlType.Text:
+                        action = WriteForTextBox;
+                        break;
+                    case ControlType.Edit:
+                        action = WriteForEditBox;
+                        //Write(selectedElement);
+                        break;
+                    case ControlType.DataGrid:
+                        action = Write;
+                        break;
+                    case ControlType.Calendar:
+                        action = Write;
+                        break;
+
+                }
+                //
+                if (action != null)
+                {
+                  return  action(selectedElement);
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                OccureLog.ErrorInSetValue(this, e);
+                return false;
+            }
+
+        }
+
+        private bool WriteForEditBox(AutomationElement selectedElement)
+        {
+            var textValue = (string)GetTextValue(null);
+            if (textValue != string.Empty && textValue != null)
+            {
+                try
+                {
+                    if (selectedElement.IsEnabled)
+                    {
+                        selectedElement.Focus();
+                        using (Keyboard.Pressing(VirtualKeyShort.CONTROL))
+                        {
+                            Keyboard.Press(VirtualKeyShort.KEY_A);
+                        }
+                        Keyboard.Release(VirtualKeyShort.CONTROL);
+                        Keyboard.Press(VirtualKeyShort.BACK);
+                        if (textValue != String.Empty || textValue != null)
+                        {
+                            Keyboard.Type(textValue);
+                            return true;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    
+                    OccureLog.ErrorInSetValue(this, e);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private bool WriteForTextBox(AutomationElement automation)
+        {
+            
+            var asTextBox = automation.AsTextBox();
+            var textValue = (string)GetTextValue(null);
+            if (textValue != string.Empty && textValue != null)
+            {
+                try
+                {
+                    if (asTextBox.IsReadOnly == false)
+                    {
+                        asTextBox.Focus();
+                        using (Keyboard.Pressing(VirtualKeyShort.CONTROL))
+                        {
+                            Keyboard.Press(VirtualKeyShort.KEY_A);
+                        }
+                        Keyboard.Release(VirtualKeyShort.CONTROL);
+                        Keyboard.Press(VirtualKeyShort.BACK);
+                        if (textValue != String.Empty || textValue != null)
+                        {
+                            Keyboard.Type(textValue);
+                            return true;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    
+                    OccureLog.ErrorInSetValue(this, e);
+                    return false;
+                }
+
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool Write(AutomationElement automationElement)
+        {
+            var textValue = (string)GetTextValue(null);
+            if (textValue != string.Empty && textValue != null)
+            {
+                try
+                {
+
+                    automationElement.Focus();
+                    Keyboard.Type(textValue);
+                    return true;
+
+                }
+                catch (Exception e)
+                {
+                    
+                    OccureLog.ErrorInSetValue(this, e);
+                    return false;
+                }
+
             }
 
             return true;
 
+
         }
+        //todo:??why return come back to override and dont work
+        //private AutomationElement[] GetElements(GlobalVariablePlayer globalVariablePlayer)
+        //{
+        //    //todo:##write filter and time manager for find target eleman
+        //    try
+        //    {
+        //        //todo$$:error coreCode for select get condtion
+        //        var condition = ((SelectElementStoreable)GetSelectCondition(null));
+        //        if (condition != null)
+        //        {
+        //            var conditionConditionForSelectElement = condition.ConditionForSelectElement;
+        //            if (conditionConditionForSelectElement == null)
+        //            {
+        //                OccureLog.ErrorToFindTargetElement(this);
+        //                return null;
+        //            }
+        //            else
+        //            {
+
+        //                var targetElements =
+        //                    conditionConditionForSelectElement.GetTargetElements(globalVariablePlayer.CurrentMainWindow);
+        //                if (targetElements == null || targetElements.Length == 0)
+        //                {
+        //                    OccureLog.ErrorToFindTargetElement(this);
+        //                    return null;
+        //                }
+        //                else
+        //                {
+
+        //                    return targetElements;
+        //                }
+        //            }
+
+        //        }
+        //        else
+        //        {
+        //            OccureLog.ErrorToFindTargetElement(this);
+        //            return null;
+        //        }
+        //        //ConditionForSelectElement conditionForSelectElement = cse.SelectElementStoreable.ConditionForSelectElement;
+        //        ////nead filter for time scroll position found area found
+        //        //AutomationElement[] targetElements = conditionForSelectElement.GetTargetElements(globalVariablePlayer.CurrentMainWindow);
+
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        OccureLog.ErrorToFindTargetElement(this, e);
+        //        return null;
+        //    }
+
+        //}
 
         public override StatusOfExecutionEnum GetExecuteStatus()
         {
@@ -557,5 +857,8 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
         #endregion
 
+
+
+        #endregion
     }
 }

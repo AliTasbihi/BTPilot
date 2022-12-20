@@ -906,6 +906,19 @@ namespace AdvancePanelLibrary.Component.BaseElements
 
             }
         }
+        public string GetConnectorPropertyForLableContenet(string elementNameForArrow, string elementNameForData)
+        {
+            var arrow = InputArrowByElementName(elementNameForArrow);
+            if (arrow == null)
+            {
+                var elementByName = ElementByName(elementNameForData);
+                return ((ElmLabel)elementByName).Content;
+            }
+            else
+            {
+                return (string)arrow.TransferData;
+            }
+        }
 
 
         #endregion

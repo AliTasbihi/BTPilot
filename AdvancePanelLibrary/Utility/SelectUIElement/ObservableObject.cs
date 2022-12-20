@@ -35,7 +35,7 @@ namespace AdvancePanelLibrary.Utility.SelectUIElement
         }
 
         /// <summary>
-        /// Saves a property value to the internal backing field
+        /// Saves a property value to the internal backing field 
         /// </summary>
         protected bool SetProperty<T>(T newValue, [CallerMemberName] string propertyName = null)
         {

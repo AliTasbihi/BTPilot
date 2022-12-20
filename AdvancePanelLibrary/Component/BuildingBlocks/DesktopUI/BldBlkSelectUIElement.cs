@@ -16,14 +16,15 @@ using System.Xml.Linq;
 
 namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
 {
+    //todo:##
+    //write tasbihi
     public class BldBlkSelectUIElement : BasicBuildingBlock
     {
         private AutomationElement[] foundElements;
         private int currentIndex;
 
         #region Connector Property
-        //todo:##
-        #region writeTasbihi
+      
 
         private object IsNotFoundElementConnect(object sender)
         {
@@ -120,7 +121,6 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         {
             return 0;
         }
-        #endregion
 
         public BldBlkSelectUIElement()
         {
@@ -533,7 +533,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
             this.StatusOfExecution = StatusOfExecutionEnum.None;
         }
 
-        private object sourceElement;
+       
         public override bool ExecuteBuildingBlock(GlobalVariablePlayer globalVariablePlayer)
         {
             try
@@ -613,8 +613,8 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
                 }
                 if (action != null)
                 {
-                    bool resultAction = action(selectedElement);
-                    return resultAction;
+                    return action(selectedElement);
+
                 }
                 else
                 {
@@ -626,7 +626,6 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
             {
                 OccureLog.ErrorInSelect(this, e);
             }
-
 
             return false;
         }
@@ -707,6 +706,7 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
                                 .Where(q => q.Text.Contains(textValue, StringComparison.CurrentCultureIgnoreCase))
                                 .FirstOrDefault();
                             var listBoxItem = asListBox.Select(selectedItem.Text);
+                            return true;
                         }
                         else if (getMethod.SelectedText == "Add to selection")
                         {

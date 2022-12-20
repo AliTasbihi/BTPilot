@@ -12,7 +12,9 @@ namespace AdvancePanelLibrary.Component.BaseElements
         public MyTextSize MySize { get; set; } = MyTextSize.Medium;
         public string Title { get; set; } = "";
         public ContentAlignment Alinment { get; set; }
-
+        //todo:##
+        //اضافه کردن پراپ برای نگهداری اطلاعات
+        public string Content { get; set; }
         public Color BackGround { get; set; } = Color.Transparent;
         public Color TextColor { get; set; } = Color.Black;
 

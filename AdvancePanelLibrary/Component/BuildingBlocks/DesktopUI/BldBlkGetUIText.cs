@@ -1,14 +1,22 @@
 ﻿using AdvancePanelLibrary.Component.BaseElements;
 using AdvancePanelLibrary.Utility;
+using AutoCreateWithJson.Utility.Log;
+using FlaUI.Core;
 using FlaUI.Core.AutomationElements;
+using FlaUI.Core.Patterns;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AdvancePanelLibrary.Component.BaseStructure;
+using AdvancePanelLibrary.PlayerExecutiton;
+using FlaUI.Core.Definitions;
 
 namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
 {
+    //todo:##
+    //write tasbihi
     public class BldBlkGetUIText : BasicBuildingBlock
     {
         private AutomationElement[] foundElements;
@@ -21,7 +29,17 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
         }
         private object GetAddTextFound(object sender)
         {
-            return GetConnectorPropertyFoundElement(foundElements, currentIndex);
+            return GetConnectorPropertyForLableContenet(nameTextFound, nameTextFound);
+        }
+        private object IsNotFoundElementConnect(object sender)
+        {
+            var getOutPutArrowByElementName = OutPutArrowByElementName(nameNotFound);
+            if (getOutPutArrowByElementName != null)
+            {
+                return getOutPutArrowByElementName.ConnectorEnd != null ? true : false;
+            }
+
+            return false;
         }
         private object GetSpliteLines(object sender)
         {
@@ -109,9 +127,8 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
             AddIsCaseSensitive();
             AddFilter();
             AddUseOccur();
-            AddCurrentIndex();
-            AddCompleted();
             AddCount();
+            AddCurrentIndex();
             AddDefaultTimeout();
             AddTimeout();
             AddScrollToFind();
@@ -203,6 +220,19 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
             Children.Add(new ElmSeparateLine());
         }
 
+        private void AddCurrentIndex()
+        {
+            var lbl = new ElmLabel(this);
+            lbl.Visible = false;
+            lbl.IsNecessaryToView = 0;
+            lbl.Padding = new Padding(3, 0, 3, 0);
+            lbl.Title = "Current index";
+            lbl.Alinment = ContentAlignment.MiddleRight;
+            lbl.AddOneConnector(false, Color.Blue, 0, outputDataFunction: GetCurrentIndex);
+            Children.Add(lbl);
+            Children.Add(new ElmSeparateLine());
+        }
+
         private void AddCount()
         {
             var lbl = new ElmLabel(this);
@@ -215,40 +245,9 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
             Children.Add(new ElmSeparateLine());
         }
 
-        private const string lblCompleted = "lblCompleted";
-        private void AddCompleted()
-        {
-            var lbl = new ElmLabel(this);
-            lbl.Name = lblCompleted;
-            lbl.Visible = false;
-            lbl.IsNecessaryToView = 0;
-            lbl.Padding = new Padding(3, 0, 3, 0);
-            lbl.Title = "Completed";
-            lbl.Alinment = ContentAlignment.MiddleRight;
-            lbl.AddOneConnector(false, Color.Green, 0, outputDataFunction: GetCurrentIndex);
-            Children.Add(lbl);
-            Children.Add(new ElmSeparateLine());
-        }
-        private const string lblCurrentIndex = "lblCurrentIndex";
-        private void AddCurrentIndex()
-        {
-            var lbl = new ElmLabel(this);
-            lbl.Name = lblCurrentIndex;
-            lbl.Visible = false;
-            lbl.IsNecessaryToView = 0;
-            lbl.Padding = new Padding(3, 0, 3, 0);
-            lbl.Title = "Current index";
-            lbl.Alinment = ContentAlignment.MiddleRight;
-            lbl.AddOneConnector(false, Color.Blue, 0, outputDataFunction: GetCurrentIndex);
-            Children.Add(lbl);
-            Children.Add(new ElmSeparateLine());
-        }
-
-        private const string lblUseOccur = "lblUseOccur";
         private void AddUseOccur()
         {
             var combo = new ElmComboBox(this);
-            combo.Name = lblUseOccur;
             combo.IsNecessaryToView = 0;
             combo.Padding = new Padding(10, 2, 10, 2);
             combo.TitlePosition = ContentAlignment.MiddleLeft;
@@ -262,26 +261,6 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
             combo.SelectedText = "1";
             Children.Add(combo);
             Children.Add(new ElmSeparateLine());
-
-            combo.TheClick = ComboUseOccurClick;
-        }
-
-        private void ComboUseOccurClick(object sender, MouseEventArgs e)
-        {
-            var combo = sender as ElmComboBox;
-            combo.SelectItemByClick(sender, e);
-            var currentIndex = (ElmLabel)ElementByName(lblCurrentIndex);
-            var completed = (ElmLabel)ElementByName(lblCompleted);
-            if (combo.SelectedText == "All")
-            {
-                currentIndex.Visible = true;
-                completed.Visible = true;
-            }
-            else
-            {
-                currentIndex.Visible = false;
-                completed.Visible = false;
-            }
         }
 
         private void AddFilter()
@@ -435,28 +414,31 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
             Children.Add(new ElmSeparateLine());
         }
 
+        private const string nameNotFound = "Not found";
         private void AddNotFound()
         {
             var lbl = new ElmLabel(this);
             lbl.IsNecessaryToView = 0;
             lbl.Padding = new Padding(10, 0, 10, 0);
             lbl.Title = "Not found";
+            lbl.Name = nameNotFound;
             lbl.Alinment = ContentAlignment.MiddleRight;
             lbl.AddOneConnector(false, Color.Green, 0);
             Children.Add(lbl);
             Children.Add(new ElmSeparateLine());
         }
 
+        private const string nameTextFound = "text found";
         private void AddTextFound()
         {
             var lbl = new ElmLabel(this);
             lbl.IsNecessaryToView = 0;
             lbl.Padding = new Padding(3, 0, 3, 0);
             lbl.Title = "Text found";
+            lbl.Name = nameTextFound;
             lbl.Alinment = ContentAlignment.MiddleRight;
             lbl.AddOneConnector(false, Color.Blue, 0, outputDataFunction: GetAddTextFound);
             Children.Add(lbl);
-
             Children.Add(new ElmSeparateLine());
         }
 
@@ -490,5 +472,139 @@ namespace AdvancePanelLibrary.Component.BuildingBlocks.DesktopUI
             lbl.IsHeaderLabel = true;
         }
 
+        public override void SetExecuteInit()
+        {
+            StatusOfExecution = StatusOfExecutionEnum.None;
+        }
+
+        public override bool ExecuteBuildingBlock(GlobalVariablePlayer globalVariablePlayer)
+        {
+            try
+            {
+                OccureLog.StartExecutorBuildingBlock(this);
+                var selectElementStoreable = (SelectElementStoreable)GetSelectCondition(null);
+                var sourceElement = (AutomationElement)GetSourceElement(null);
+                var timeout = (string)GetTimeout(null);
+                TimeSpan timeSpan = GlobalFunction.ConvertToTimeSpan(timeout);
+                //todo:exception 03
+                var targetElements = GetElementsWithConditionTimeout(globalVariablePlayer, sourceElement, selectElementStoreable, timeSpan);
+                if (targetElements == null || targetElements.Length == 0)
+                {
+                    //for eleman not found
+                    if ((bool)IsNotFoundElementConnect(null))
+                    {
+                        OccureLog.RunElementNotFound(this);
+                        throw new Exception("write this parameter");
+                        //StatusOfExecution = StatusOfExecutionEnum.FinishWithErrorRunNotFound;
+                        return true;
+                    }
+                    else
+                    {
+                        //
+                        OccureLog.FinishWithErrorExecutorBuildingBlock(this);
+                        StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                        return true;
+                    }
+                }
+
+                bool resultClick = GetValues(targetElements.FirstOrDefault());
+                if (resultClick)
+                {
+                    StatusOfExecution = StatusOfExecutionEnum.Finish;
+                    OccureLog.FinishExecutorBuildingBlock(this);
+                    return resultClick;
+                }
+                else
+                {
+                    StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                    OccureLog.FinishWithErrorExecutorBuildingBlock(this);
+                    return resultClick;
+                }
+
+            }
+            catch (Exception e)
+            {
+                OccureLog.FinishWithErrorExecutorBuildingBlock(this, e);
+                StatusOfExecution = StatusOfExecutionEnum.FinishWithError;
+                return false;
+            }
+
+            return false;
+
+        }
+
+        private bool GetValues(AutomationElement? automationElement)
+        {
+            try
+            {
+                var elmLabel = (ElmLabel)ElementByName(nameTextFound);
+                if (automationElement.Patterns.Value.IsSupported)
+                {
+                    var automationPattern = automationElement.Patterns.Value.PatternOrDefault;
+                    var valueValueOrDefault = automationPattern.Value.ValueOrDefault;
+                    elmLabel.Content = valueValueOrDefault;
+
+                    return true;
+                }
+                else if (automationElement.Patterns.Text.IsSupported)
+                {
+                    var textPatternOrDefault = automationElement.Patterns.Text.PatternOrDefault;
+                    ITextRange text = textPatternOrDefault.DocumentRange.Clone();
+                    elmLabel.Content = text.ToString();
+                    return true;
+                }
+                else if (automationElement.Patterns.Text2.IsSupported)
+                {
+                    var textPatternOrDefault = automationElement.Patterns.Text2.PatternOrDefault;
+                    var text = textPatternOrDefault.DocumentRange.Clone().ToString();
+                    elmLabel.Content = text;
+                    return true;
+                }
+                else if (automationElement.Patterns.TextEdit.IsSupported)
+                {
+                    var s = automationElement.Patterns.TextEdit.Pattern.DocumentRange.Clone().ToString();
+                    elmLabel.Content = s;
+                    return true;
+
+                }
+                else if (automationElement.Patterns.Grid.IsSupported)
+                {
+                    var gridPatternOrDefault = automationElement.Patterns.GridItem.PatternOrDefault.Column.ToDisplayText();
+                    elmLabel.Content = gridPatternOrDefault;
+                    return true;
+                }
+                else if (automationElement.Patterns.LegacyIAccessible.IsSupported)
+                {
+                    ILegacyIAccessiblePattern legacyIAccessiblePattern = automationElement.Patterns.LegacyIAccessible.PatternOrDefault;
+                    var getValue = legacyIAccessiblePattern.Name.ValueOrDefault;
+                    elmLabel.Content = getValue;
+                    return true;
+                }
+                return TryGetValuesWithType(automationElement);
+                bool TryGetValuesWithType(AutomationElement automationElement1)
+                {
+                    switch (automationElement.ControlType)
+                    {
+                        case ControlType.Edit:
+                            elmLabel.Content = automationElement.AsTextBox().Text;
+                            break;
+                            return true;
+                    }
+
+                    return true ? elmLabel.Content != string.Empty : false;
+                }
+            }
+            catch (Exception e)
+            {
+                OccureLog.ErrorToGetValue(this, e);
+                return false;
+            }
+
+        }
+
+        public override StatusOfExecutionEnum GetExecuteStatus()
+        {
+            return StatusOfExecution;
+        }
     }
 }
