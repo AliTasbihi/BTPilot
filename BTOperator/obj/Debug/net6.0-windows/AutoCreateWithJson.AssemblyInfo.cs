@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoCreateWithJson")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef9331952e0005e711bb566cdb3b5bbd3b9c9497")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoCreateWithJson")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoCreateWithJson")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

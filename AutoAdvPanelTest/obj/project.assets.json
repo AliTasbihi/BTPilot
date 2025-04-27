@@ -904,19 +904,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ali\\.nuget\\packages\\": {}
+    "C:\\Users\\562\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ali\\Desktop\\project\\ConsoleApp1\\AutoAdvPanelTest\\AutoAdvPanelTest.csproj",
+      "projectUniqueName": "C:\\Users\\562\\Desktop\\BTPilot\\AutoAdvPanelTest\\AutoAdvPanelTest.csproj",
       "projectName": "AutoAdvPanelTest",
-      "projectPath": "C:\\Users\\Ali\\Desktop\\project\\ConsoleApp1\\AutoAdvPanelTest\\AutoAdvPanelTest.csproj",
-      "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ali\\Desktop\\project\\ConsoleApp1\\AutoAdvPanelTest\\obj\\",
+      "projectPath": "C:\\Users\\562\\Desktop\\BTPilot\\AutoAdvPanelTest\\AutoAdvPanelTest.csproj",
+      "packagesPath": "C:\\Users\\562\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\562\\Desktop\\BTPilot\\AutoAdvPanelTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\562\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -924,14 +929,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\Ali\\Desktop\\project\\ConsoleApp1\\AdvancePanelLibrary\\AdvancePanelLibrary.csproj": {
-              "projectPath": "C:\\Users\\Ali\\Desktop\\project\\ConsoleApp1\\AdvancePanelLibrary\\AdvancePanelLibrary.csproj"
+            "C:\\Users\\562\\Desktop\\BTPilot\\AdvancePanelLibrary\\AdvancePanelLibrary.csproj": {
+              "projectPath": "C:\\Users\\562\\Desktop\\BTPilot\\AdvancePanelLibrary\\AdvancePanelLibrary.csproj"
             }
           }
         }
@@ -940,6 +946,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -956,6 +967,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.32, 6.0.32]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.32, 6.0.32]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.32, 6.0.32]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.32, 6.0.32]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -964,7 +993,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }
