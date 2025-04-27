@@ -187,3 +187,216 @@ StartExecutorBuildingBlock:BldBlkClickUIElement
 Date >>>>> 4/27/2025 9:53:12 AM
 FinishExecutorBuildingBlock:BldBlkClickUIElement
 ================================================
+Date >>>>> 4/27/2025 10:20:04 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 4/27/2025 10:20:04 AM
+Player Error >>>>> هیچ نقطه شروعی پیدا نشد
+================================================
+Date >>>>> 4/27/2025 10:20:52 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 4/27/2025 10:20:52 AM
+Player Error >>>>> هیچ نقطه شروعی پیدا نشد
+================================================
+Date >>>>> 4/27/2025 10:33:18 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 4/27/2025 10:33:18 AM
+Player Error >>>>> هیچ نقطه شروعی پیدا نشد
+================================================
+Date >>>>> 4/27/2025 10:34:42 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 4/27/2025 10:34:42 AM
+Player Error >>>>> هیچ نقطه شروعی پیدا نشد
+================================================
+Date >>>>> 4/27/2025 11:52:50 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 4/27/2025 11:52:50 AM
+Player Error >>>>> هیچ نقطه شروعی پیدا نشد
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+FlowToHere: BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+ConnectToAdvancePanel
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+Current Command: BldBlkStart
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+Current Command: BldBlkStartApplication
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+StartApplication
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:00 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:01 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:01 AM
+Current Command: BldBlkFindUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:01 AM
+StartExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+FinishExecutorBuildingBlock:BldBlkFindUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:02 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:03 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:03 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:03 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:04 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:04 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:04 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:04 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:04 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:04 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:05 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:05 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:05 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:05 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:05 AM
+Current Command: BldBlkSelectUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:06 AM
+FinishExecutorBuildingBlock:BldBlkSelectUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:06 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:06 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:07 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:07 AM
+Current Command: BldBlkSelectUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:08 AM
+FinishExecutorBuildingBlock:BldBlkSelectUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:08 AM
+Current Command: BldBlkSelectUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:09 AM
+FinishExecutorBuildingBlock:BldBlkSelectUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:09 AM
+Current Command: BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:09 AM
+StartExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:09 AM
+FinishExecutorBuildingBlock:BldBlkSetUIElementValue
+================================================
+Date >>>>> 4/27/2025 11:54:09 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:09 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:10 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:10 AM
+Current Command: BldBlkSelectUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:11 AM
+FinishExecutorBuildingBlock:BldBlkSelectUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:11 AM
+Current Command: BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:11 AM
+StartExecutorBuildingBlock:BldBlkClickUIElement
+================================================
+Date >>>>> 4/27/2025 11:54:11 AM
+FinishExecutorBuildingBlock:BldBlkClickUIElement
+================================================
